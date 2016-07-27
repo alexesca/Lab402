@@ -119,6 +119,19 @@ namespace Lab_04
             table1.Columns.Add("GPA");
 
             //Need to figure out how to refresh the dataGrid's view to show the added column [Andy]
+
+            //Calculate the SUM of the grades for each student
+            for (int i = 0; i < table1.Rows.Count; i++)
+            {
+                table1.Rows[i]["GPA"] =
+                    (
+                        Convert.ToInt64(table1.Rows[i]["Score1"]) +
+                        Convert.ToInt64(table1.Rows[i]["Score2"]) +
+                        Convert.ToInt64(table1.Rows[i]["Score3"]) +
+                        Convert.ToInt64(table1.Rows[i]["Score4"]) +
+                        Convert.ToInt64(table1.Rows[i]["Score5"])
+                    ) / 5;
+            }
         }
     }
 }

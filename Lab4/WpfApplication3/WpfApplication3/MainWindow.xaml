@@ -22,7 +22,7 @@
                 <!-- Holds the contents of the window-->
             </StackPanel>
         </DockPanel>
-        <Button x:Name="buttonGrade" Content="Grade" HorizontalAlignment="Left" Margin="10,402,0,0" VerticalAlignment="Top" Width="76" Height="37" Click="buttonGrade_Click"/>
+        <Button x:Name="buttonGrade" Content="Grade" HorizontalAlignment="Left" Margin="10,402,0,0" Width="76" Click="buttonGrade_Click" Height="37" VerticalAlignment="Top"/>
         <Button x:Name="buttonClassAverage" Content="Class Avg." HorizontalAlignment="Left" Margin="108,402,0,0" VerticalAlignment="Top" Width="76" Height="37"/>
         <Button x:Name="buttonDelete" Content="Delete" HorizontalAlignment="Left" Margin="203,402,0,0" VerticalAlignment="Top" Width="76" Height="37" Click="buttonDelete_Click"/>
         <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="301,402,0,0" VerticalAlignment="Top" Width="76" Height="37" Click="buttonAdd_Click"/>
