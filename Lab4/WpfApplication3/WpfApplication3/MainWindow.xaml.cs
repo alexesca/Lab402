@@ -90,6 +90,12 @@ namespace Lab_04
             Environment.Exit(0);
         }
 
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //Adds a new blank row [Andy]
+            table1.Rows.Add();
+        }
+
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
             //Checks if the user selected a row
@@ -105,6 +111,14 @@ namespace Lab_04
 
                 }
             }
+        }
+
+        private void buttonGrade_Click(object sender, RoutedEventArgs e)
+        {
+            //Adds a columns named "GPA"
+            table1.Columns.Add("GPA");
+
+            //Need to figure out how to refresh the dataGrid's view to show the added column [Andy]
         }
     }
 }
