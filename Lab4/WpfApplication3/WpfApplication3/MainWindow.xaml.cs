@@ -115,7 +115,7 @@ namespace Lab_04
 
         private void buttonGrade_Click(object sender, RoutedEventArgs e)
         {
-            //Adds a columns named "GPA"
+            //Adds a new column named "GPA" [Andy]
             table1.Columns.Add("GPA");
 
             //Need to figure out how to refresh the dataGrid's view to show the added column [Andy]
