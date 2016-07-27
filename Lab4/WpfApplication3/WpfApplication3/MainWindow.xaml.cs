@@ -29,6 +29,7 @@ namespace Lab_04
     public partial class MainWindow : Window
     {
         DataTable table1;
+        DataSet set;
 
         public MainWindow()
         {
@@ -56,7 +57,7 @@ namespace Lab_04
                 table1 = new DataTable("grades");
                 ReadFile.readFile(filename, table1);
                 // Create a DataSet and put the table in it.
-                DataSet set = new DataSet("Students");
+                set = new DataSet("Students");
                 set.Tables.Add(table1);
                 dataGrid.ItemsSource = set.Tables["grades"].DefaultView;
             }
@@ -93,7 +94,9 @@ namespace Lab_04
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
             //Adds a new blank row [Andy]
-            table1.Rows.Add();
+            DataView dv = (DataView)dataGrid.ItemsSource;
+            DataRow dr = dv.Table.NewRow();
+            dv.Table.Rows.Add();
         }
 
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
@@ -104,7 +107,8 @@ namespace Lab_04
                 //Gets rid of the selected row
                 try
                 {
-                    table1.Rows.RemoveAt(dataGrid.SelectedIndex);
+                    DataView dv = (DataView)dataGrid.ItemsSource;
+                    dv.Table.Rows.RemoveAt(dataGrid.SelectedIndex);
                 }
                 catch
                 {
@@ -116,7 +120,14 @@ namespace Lab_04
         private void buttonGrade_Click(object sender, RoutedEventArgs e)
         {
             //Adds a new column named "GPA" [Andy]
-            table1.Columns.Add("GPA");
+            DataView dv = (DataView)dataGrid.ItemsSource;
+            dv.Table.Columns.Add("GPA");
+            dataGrid.ItemsSource = null;
+            dataGrid.ItemsSource = dv;
+
+            //dataGrid.UpdateLayout();
+            //set.Tables.Add(table1);
+            //dataGrid.ItemsSource = set.Tables["grades"].DefaultView;
 
             //Need to figure out how to refresh the dataGrid's view to show the added column [Andy]
 
@@ -131,6 +142,36 @@ namespace Lab_04
                         Convert.ToInt64(table1.Rows[i]["Score4"]) +
                         Convert.ToInt64(table1.Rows[i]["Score5"])
                     ) / 5;
+            }
+        }
+
+        private void buttonClassAverage_Click(object sender, RoutedEventArgs e)
+        {
+            DataView dv = (DataView)dataGrid.ItemsSource;
+            try
+            {
+                double avg = 0;
+                DataRow newRow = dv.Table.NewRow();
+                newRow[0] = "COURSE";
+                newRow[1] = "AVERAGE";
+                for (int i = 2; i < 8; i++)
+                {
+                    foreach (DataRow row in dv.Table.Rows)
+                    {
+                        avg += Convert.ToDouble(row[i].ToString());
+                    }
+                    newRow[i] = Math.Round(avg / dv.Table.Rows.Count, 2);
+                    avg = 0;
+                }
+                dv.Table.Rows.Add(newRow);
+                //buttonGrade.IsEnabled = false;
+                //buttonDelete.IsEnabled = false;
+                //buttonAdd.IsEnabled = false;
+                //buttonClassAverage.IsEnabled = false;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
             }
         }
     }
