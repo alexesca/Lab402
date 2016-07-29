@@ -185,11 +185,17 @@ namespace Lab_04
                 try
                 {  
                     DataView dv = (DataView)dataGrid.ItemsSource;
-                    //Check if all scores' columns are numbers 
-                    for (int i = 2; i < table1.Columns.Count; i++)
+                    //Check if all score columns are numbers 
+                    int count = table1.Columns.Count;
+                    if (dv.Table.Columns.Equals("GPA"))
                     {
-                        //the index of the cell
-                        string str = dv.Table.Rows[dataGrid.SelectedIndex][i].ToString();
+                        count -= 1;
+                    }
+                    //for (int i = 2; i < table1.Columns.Count; i++)
+                    for (int i = 2; i < count; i++)
+                        {
+                            //the index of the cell
+                            string str = dv.Table.Rows[dataGrid.SelectedIndex][i].ToString();
                         double inNumber;
                         //Convert the object to a double and send false if it isn't
                         bool isNumeric = double.TryParse(str, out inNumber);
@@ -201,11 +207,10 @@ namespace Lab_04
                             dv.Table.Rows[dataGrid.SelectedIndex][i] = 0;
                             MessageBox.Show("Please enter a valid number.");
                         }
-                        //Accept the changes
                         else
+                            //Accept the changes
                             dv.Table.AcceptChanges();
                     }
-                  
                 }
                 catch (Exception)
                 {
