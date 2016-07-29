@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="484.211" Width="843.421">
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Height="294" Width="815"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Height="294" Width="815" CurrentCellChanged="dataGrid_CurrentCellChanged"/>
 
         <!-- Menu to Load Data from file -->
         <DockPanel>

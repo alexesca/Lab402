@@ -99,6 +99,7 @@ namespace Lab_04
             dv.Table.Rows.Add();
         }
 
+        //Delete the select row
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
             //Checks if the user selected a row
@@ -117,6 +118,7 @@ namespace Lab_04
             }
         }
 
+        //Grade the entire class
         private void buttonGrade_Click(object sender, RoutedEventArgs e)
         {
             //Adds a new column named "GPA" [Andy]
@@ -145,6 +147,7 @@ namespace Lab_04
             }
         }
 
+        //Code to obtain the class Average
         private void buttonClassAverage_Click(object sender, RoutedEventArgs e)
         {
             DataView dv = (DataView)dataGrid.ItemsSource;
@@ -174,5 +177,44 @@ namespace Lab_04
                 MessageBox.Show(exc.Message);
             }
         }
+
+        //Code to check only are numbers in the cell of Scores
+        private void dataGrid_CurrentCellChanged(object sender, EventArgs e)
+        {
+          //If we select a row 
+            if (dataGrid.SelectedIndex >= 0)
+            {
+                try
+                {  
+                    DataView dv = (DataView)dataGrid.ItemsSource;
+                    //Check if in all scores's columns are numbers 
+                    for (int i = 2; i < table1.Columns.Count; i++)
+                    {
+                        //the index of the cell
+                        string str = dv.Table.Rows[dataGrid.SelectedIndex][i].ToString();
+                        double inNumber;
+                        //Convert the object to a double and sent false if doesn't
+                        bool isNumeric = double.TryParse(str, out inNumber);
+                        //Value the boolean
+                        if (isNumeric == false )
+                        {
+                            //Reject changes and print 0 instance of the string
+                            dv.Table.RejectChanges();
+                            dv.Table.Rows[dataGrid.SelectedIndex][i] = 0;
+                        }
+                        //Accept the changes
+                        else
+                            dv.Table.AcceptChanges();
+                    }
+                  
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+        }
+        
     }
+
 }
