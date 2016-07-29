@@ -96,7 +96,9 @@ namespace Lab_04
             //Adds a new blank row [Andy]
             DataView dv = (DataView)dataGrid.ItemsSource;
             DataRow dr = dv.Table.NewRow();
-            dv.Table.Rows.Add();
+//            dv.Table.Rows.Add();
+            dataGrid.ItemsSource = null;
+            dataGrid.ItemsSource = dv;
         }
 
         //Delete the select row
@@ -124,14 +126,10 @@ namespace Lab_04
             //Adds a new column named "GPA" [Andy]
             DataView dv = (DataView)dataGrid.ItemsSource;
             dv.Table.Columns.Add("GPA");
+
+            //Refreshes the dataGrid's view to show the added column [Andy]
             dataGrid.ItemsSource = null;
             dataGrid.ItemsSource = dv;
-
-            //dataGrid.UpdateLayout();
-            //set.Tables.Add(table1);
-            //dataGrid.ItemsSource = set.Tables["grades"].DefaultView;
-
-            //Need to figure out how to refresh the dataGrid's view to show the added column [Andy]
 
             //Calculate the SUM of the grades for each student
             for (int i = 0; i < table1.Rows.Count; i++)
@@ -187,13 +185,13 @@ namespace Lab_04
                 try
                 {  
                     DataView dv = (DataView)dataGrid.ItemsSource;
-                    //Check if in all scores's columns are numbers 
+                    //Check if all scores' columns are numbers 
                     for (int i = 2; i < table1.Columns.Count; i++)
                     {
                         //the index of the cell
                         string str = dv.Table.Rows[dataGrid.SelectedIndex][i].ToString();
                         double inNumber;
-                        //Convert the object to a double and sent false if doesn't
+                        //Convert the object to a double and send false if it isn't
                         bool isNumeric = double.TryParse(str, out inNumber);
                         //Value the boolean
                         if (isNumeric == false )
@@ -201,6 +199,7 @@ namespace Lab_04
                             //Reject changes and print 0 instance of the string
                             dv.Table.RejectChanges();
                             dv.Table.Rows[dataGrid.SelectedIndex][i] = 0;
+                            MessageBox.Show("Please enter a valid number.");
                         }
                         //Accept the changes
                         else
@@ -214,7 +213,5 @@ namespace Lab_04
                 }
             }
         }
-        
     }
-
 }
