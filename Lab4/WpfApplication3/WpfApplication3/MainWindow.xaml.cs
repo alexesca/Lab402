@@ -125,7 +125,11 @@ namespace Lab_04
         {
             //Adds a new column named "GPA" [Andy]
             DataView dv = (DataView)dataGrid.ItemsSource;
-            dv.Table.Columns.Add("GPA");
+
+            if (!dv.Table.Columns.Contains("GPA"))
+            {
+                dv.Table.Columns.Add("GPA");
+            }
 
             //Refreshes the dataGrid's view to show the added column [Andy]
             dataGrid.ItemsSource = null;
@@ -142,6 +146,7 @@ namespace Lab_04
                         Convert.ToInt64(table1.Rows[i]["Score4"]) +
                         Convert.ToInt64(table1.Rows[i]["Score5"])
                     ) / 5;
+
             }
         }
 
@@ -183,7 +188,7 @@ namespace Lab_04
             if (dataGrid.SelectedIndex >= 0)
             {
                 try
-                {  
+                { 
                     DataView dv = (DataView)dataGrid.ItemsSource;
                     //Check if all score columns are numbers 
                     int count = table1.Columns.Count;
@@ -217,6 +222,19 @@ namespace Lab_04
 
                 }
             }
+        }
+
+      
+        private void dataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            //if the user select the column "GAP"
+            if (e.Column.DisplayIndex == 7)
+            {
+                //Reject change and recover the original value
+                e.Cancel = true;
+            
+            }
+       
         }
     }
 }

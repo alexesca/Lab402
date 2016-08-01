@@ -27,3 +27,8 @@ C:\Users\Andy\Source\Repos\Lab402b\Lab4\WpfApplication3\Student\bin\Debug\Studen
 C:\Users\Andy\Source\Repos\Lab402b\Lab4\WpfApplication3\Student\obj\Debug\Student.csprojResolveAssemblyReference.cache
 C:\Users\Andy\Source\Repos\Lab402b\Lab4\WpfApplication3\Student\obj\Debug\Student.dll
 C:\Users\Andy\Source\Repos\Lab402b\Lab4\WpfApplication3\Student\obj\Debug\Student.pdb
+C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\Student\bin\Debug\Student.dll
+C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\Student\bin\Debug\Student.pdb
+C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\Student\obj\Debug\Student.csprojResolveAssemblyReference.cache
+C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\Student\obj\Debug\Student.dll
+C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\Student\obj\Debug\Student.pdb
