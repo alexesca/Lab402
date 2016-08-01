@@ -136,6 +136,7 @@ namespace Lab_04
             dataGrid.ItemsSource = dv;
 
             //Calculate the SUM of the grades for each student
+            //Does not calculate the Class Average [Andy]
             int RowCount = table1.Rows.Count;
             if (table1.Rows[table1.Rows.Count - 1]["Firstname"] == "COURSE")
             {
