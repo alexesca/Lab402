@@ -119,3 +119,23 @@ C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\WpfApplication3\
 C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.g.resources
 C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.Properties.Resources.resources
 C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\WpfApplication3\obj\Debug\Lab 04.csproj.GenerateResource.Cache
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\bin\Debug\WpfApplication3.exe.config
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.exe
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.pdb
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\bin\Debug\WpfApplication3.exe
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\bin\Debug\WpfApplication3.pdb
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\bin\Debug\ReadFile.dll
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\bin\Debug\Student.dll
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\bin\Debug\WriteFile.dll
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\bin\Debug\ReadFile.pdb
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\bin\Debug\Student.pdb
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\bin\Debug\WriteFile.pdb
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\Lab 04.csprojResolveAssemblyReference.cache
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\MainWindow.g.cs
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\App.g.cs
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3_MarkupCompile.cache
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3_MarkupCompile.lref
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\MainWindow.baml
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.g.resources
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.Properties.Resources.resources
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WpfApplication3\obj\Debug\Lab 04.csproj.GenerateResource.Cache

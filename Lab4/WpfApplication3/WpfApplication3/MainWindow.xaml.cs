@@ -1,7 +1,7 @@
 ﻿//Project: Lab 4
 //Description: Read/Write using WPF application
 //Name: Alex Moreno, Andy Wold, Bethaly Tenango
-//Date: 13 Jul 2016
+//Date: 01 Aug 2016
 //Instructor: Brother Daniel Masterson
 //Course: CS 176 - Windows Desktop Development
 
@@ -136,7 +136,12 @@ namespace Lab_04
             dataGrid.ItemsSource = dv;
 
             //Calculate the SUM of the grades for each student
-            for (int i = 0; i < table1.Rows.Count; i++)
+            int RowCount = table1.Rows.Count;
+            if (table1.Rows[table1.Rows.Count - 1]["Firstname"] == "COURSE")
+            {
+                RowCount -= 1;
+            }
+            for (int i = 0; i < RowCount; i++)
             {
                 table1.Rows[i]["GPA"] =
                     (

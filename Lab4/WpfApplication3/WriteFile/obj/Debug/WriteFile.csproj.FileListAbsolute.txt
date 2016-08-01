@@ -18,3 +18,8 @@ C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\WriteFile\bin\De
 C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\WriteFile\obj\Debug\WriteFile.csprojResolveAssemblyReference.cache
 C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\WriteFile\obj\Debug\WriteFile.dll
 C:\Users\Bethaly\Source\Repos\Lab402-final\Lab4\WpfApplication3\WriteFile\obj\Debug\WriteFile.pdb
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WriteFile\bin\Debug\WriteFile.dll
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WriteFile\bin\Debug\WriteFile.pdb
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WriteFile\obj\Debug\WriteFile.csprojResolveAssemblyReference.cache
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WriteFile\obj\Debug\WriteFile.dll
+C:\Users\Andy\Source\Repos\Lab402c\Lab4\WpfApplication3\WriteFile\obj\Debug\WriteFile.pdb
